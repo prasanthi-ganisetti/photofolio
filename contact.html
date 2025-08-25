@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="line"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navbar -->
+        <nav>
+            <div class="logo">
+                <div class="name">
+                    <i class="bi bi-camera" style="color:#27a776; font-size: 28px;"></i>
+                    PhotoFolio</div>
+            </div>
+            <div class="nav-mid">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="gallery.html">Gallery <i class="bi bi-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Nature</a>
+                        <a href="gallery.html">People</a>
+                        <a href="gallery.html">Architecture</a>
+                        <a href="gallery.html">Animals</a>
+                        <a href="gallery.html">Sports</a>
+                        <a href="gallery.html">Travel</a>
+                        <div class="deep-dropdown">
+                            <a href="gallery.html">Deep Dropdown <i class="bi bi-chevron-down"></i></a>
+                            <div class="deep-dropdown-content">
+                                <a href="#">Deep Dropdown 1</a>
+                                <a href="#">Deep Dropdown 2</a>
+                                <a href="#">Deep Dropdown 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<a href="gallery.html">Gallery</a>-->
+                <a href="services.html">Services</a>
+                <a href="contact.html" style="color:#27a776;">Contact</a>
+            </div>
+            <div class="end">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </nav>
+
+        <!-- Section Title -->
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a
+                odio
+                voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.
+            </p>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> / <span style="color: white;">Contact</span>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="contact-info">
+                <div>
+                    <i class="fa fa-map-marker-alt"></i>
+                    <p><strong>Location</strong><br>A108 Adam Street, New York, NY 535022</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p><strong>Call</strong><br>+1 5589 55488 55</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><strong>Email</strong><br>info@example.com</p>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="copyright">© Copyright PhotoFolio All Rights Reserved</div>
+            <div class="end">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <p>Designed by <a href="#">SomeOne</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Loader
+        const loader = document.getElementById("loader");
+        const line = loader.querySelector(".line");
+        const mainContent = document.querySelector(".main-content");
+
+        window.addEventListener("load", () => {
+            line.classList.add("animate");
+            setTimeout(() => {
+                loader.classList.add("fade-out");
+                mainContent.classList.add("show");
+                setTimeout(() => loader.style.display = "none", 800);
+            }, 1200);
+        });
+
+        // Hamburger toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navMid = document.querySelector(".nav-mid");
+        hamburger.addEventListener("click", () => navMid.classList.toggle("active"));
+    </script>
+</body>
+
+</html>
